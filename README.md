@@ -1,4 +1,8 @@
 # ToDoApp
+ToDoApp with AngularJS, NodeJS & ExpressJS and MongoDB, with the use of Docker to create containers for the front-end and back-end.
+
+![Alt text]](https://user-images.githubusercontent.com/88794382/200399677-a36315f3-ff22-4574-b2dc-bc8b35644beb.png)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
 
