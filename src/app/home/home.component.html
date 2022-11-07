@@ -1,0 +1,57 @@
+{{getAllTasks()}}
+<div class="container">
+  <div>
+    <mat-expansion-panel style="width: 16rem;" hideToggle>
+      <mat-expansion-panel-header style="height: 5rem; text-align: center;">
+      <mat-panel-title>
+      <div class="card-body">
+        <h5 class="card-title">Total Tasks</h5>
+        <p class="card-text">{{length}}</p>
+      </div>
+    </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="expanded-text" *ngFor="let task of tasks">
+        {{task.task}}
+        <button mat-icon-button class="icon-del" (click)="delete(task)"><mat-icon>delete</mat-icon></button>
+        <button [hidden]="task.complete" mat-icon-button class="icon-val" (click)="complete(task)"><mat-icon>check</mat-icon></button>
+    </div>
+    </mat-expansion-panel>
+  </div>
+  <div>
+    <mat-expansion-panel style="width: 16rem;" hideToggle>
+      <mat-expansion-panel-header style="height: 5rem; text-align: center;">
+      <mat-panel-title>
+      <div class="card-body">
+        <h5 class="card-title">Tasks In Progress</h5>
+        <p class="card-text">{{uncompLength}}</p>
+      </div>
+    </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="expanded-text" *ngFor="let task of tasks">
+      <div [hidden]="task.complete">
+        {{task.task}}
+        <button mat-icon-button class="icon-del" (click)="delete(task)"><mat-icon>delete</mat-icon></button>
+        <button mat-icon-button class="icon-val" (click)="complete(task)"><mat-icon>check</mat-icon></button>
+      </div>
+    </div>
+    </mat-expansion-panel>
+  </div>
+  <div>
+    <mat-expansion-panel style="width: 16rem;" hideToggle>
+      <mat-expansion-panel-header style="height: 5rem; text-align: center;">
+      <mat-panel-title>
+      <div class="card-body">
+        <h5 class="card-title">Completed Tasks</h5>
+        <p class="card-text">{{compLength}}</p>
+      </div>
+    </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="expanded-text" *ngFor="let task of tasks">
+      <div [hidden]="!task.complete">
+        {{task.task}}
+        <button mat-icon-button class="icon-del" (click)="delete(task)"><mat-icon>delete</mat-icon></button>
+      </div>
+    </div>
+    </mat-expansion-panel>
+  </div>
+</div>

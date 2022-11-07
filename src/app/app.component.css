@@ -1,0 +1,14 @@
+body {
+    background-color: rgba(243, 241, 239, 1);
+}
+.mat-card {
+    border-radius: 20px;
+    min-height: 35rem;
+    height: auto;
+}
+.right{
+    float: right;
+}
+.main-container {
+    padding: 20px;
+}
